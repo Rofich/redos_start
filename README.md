@@ -96,9 +96,11 @@
 1. Скачать на Python.org(Могут быть более новые версии)
 
    ` wget https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tar.xz `
+   
+   ` dnf groupinstall 'Development Tools' `
 2. Распаковать
    
-   ` tar xf Python-3.11.3 ` 
+   ` tar xf Python-3.11.3.tar.xz ` 
 
    ` cd Python-3.11.3 `
 3. Подготовить компиляцию
@@ -110,7 +112,7 @@
 5. Установить
    
    ` make install `
-
+6. ` python3.11 -V `
 <h2 align="center"> ----- Postgresql 13 -----  </h2>
 
 Установка для РЕД ОС 7.3 осуществляется командой:
