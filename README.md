@@ -1,19 +1,27 @@
-https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax <br>
-
-https://stackoverflow.com/questions/8087184/installing-python-3-on-rhel <br>
-https://habr.com/ru/articles/501414/ <br>
-https://habr.com/ru/companies/nixys/articles/723082/ <br>
 <h2 align="center"> ----- Apache ----- </h2>
+
+` su `
 
 ` dnf update `
 
 ` echo 'SELINUX=disabled' > /etc/sysconfig/selinux `
 
 ` reboot `
-
+<hr>
 После перезагрузки:
 
-` dnf install httpd `
+` su `
+
+` dnf install httpd php81-release `
+
+` dnf clean all  `
+
+` dnf makecache `
+
+` dnf update php*  `
+
+` dnf install php php-cli php-common `
+<hr>
 
 ` systemctl enable --now httpd `
 
@@ -41,9 +49,9 @@ https://habr.com/ru/companies/nixys/articles/723082/ <br>
 
 Выходим(Ctrl+X)
 
-` sudo chown -R ваш-пользователь:apache /home/ваш-пользователь/www `
+` chown -R ваш-пользователь:apache /home/ваш-пользователь/www `
 
-` sudo chmod 775 /home /home/ваш-пользователь/www `
+` chmod 775 /home /home/ваш-пользователь /home/ваш-пользователь/www `
 
 В /etc/httpd/conf/httpd.conf находим строку :
 
@@ -57,11 +65,21 @@ https://habr.com/ru/companies/nixys/articles/723082/ <br>
 
 Меняем ` <Directory "/var/www/html"> ` на ` <Directory "/home/ваш-пользователь/www/название-сайта"> `
 
+Сохраняем всё 
+
+Перезапускаем Apache
+
+` systemctl restart httpd `
+
+Заходим по адресу: http://localhost
+
 <h2 align="center"> ----- MySQL ----- </h2>
 
-` sudo dnf insyall mysql `
+` su ` 
 
-` sudo systemctl enable --now mariadb `
+` dnf insyall mysql `
+
+` systemctl enable --now mariadb `
 
 ` mysql_secure_installation `
 ## После этого надо будет настроить 
