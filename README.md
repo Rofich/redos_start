@@ -113,6 +113,8 @@
    
    ` make install `
 6. ` python3.11 -V `
+
+` dnf install python3-devel mysql-devel `
 <h2 align="center"> ----- Postgresql 13 -----  </h2>
 
 Установка для РЕД ОС 7.3 осуществляется командой:
