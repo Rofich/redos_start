@@ -90,6 +90,9 @@
 - Введите новый пароль
 - Повторите пароль
 - На вопрос "Remove anonymous users", напишите в консоль Y и нажмите Enter 
+- "Disallow root login remotely?", отвечаем Y и жмем Enter
+- "Remove test database and access to it?", отвечаем Y и жмем Enter
+- "Reload privelege tables now?", отвечаем Y и жмем Enter
 
 <h2 align="center"> ----- Python 3.11.3 ----- </h2>
 
