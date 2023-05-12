@@ -98,6 +98,10 @@
    ` wget https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tar.xz `
    
    ` dnf groupinstall 'Development Tools' `
+   
+   ` dnf install -y zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel zlib* libffi-devel readline-devel tk-devel gcc `
+   
+   ` dnf remove python3-pip `
 2. Распаковать
    
    ` tar xf Python-3.11.3.tar.xz ` 
@@ -112,6 +116,7 @@
 5. Установить
    
    ` make install `
+   
 6. ` python3.11 -V `
 
 ` dnf install python3-devel mysql-devel `
