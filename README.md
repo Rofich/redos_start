@@ -77,7 +77,7 @@
 
 ` su ` 
 
-` dnf insyall mysql `
+` dnf insyall mysql mariadb-server `
 
 ` systemctl enable --now mariadb `
 
