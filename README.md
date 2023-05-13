@@ -127,7 +127,7 @@
 
 Установка для РЕД ОС 7.3 осуществляется командой:
 
-` dnf install postgresql13-server `
+` dnf install postgresql13-server pgadmin4 pgadmin4-qt `
 
 Настройка postgresql:
 
@@ -136,3 +136,11 @@
 Запуск сервера PostgreSQL:
 
 ` systemctl enable --now postgresql-13 `
+
+Настроим пароль:
+
+1. ` su - postgres `
+2.  ` psql `
+3.  ` postgres `
+4.  ` \password `
+5.  Выход из оболочки ` \q `
