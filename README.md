@@ -77,7 +77,7 @@
 
 ` su ` 
 
-` dnf install mysql mariadb-server `
+` dnf install mysql mariadb-server phpmyadmin `
 
 ` systemctl enable --now mariadb `
 
@@ -93,6 +93,22 @@
 - "Disallow root login remotely?", отвечаем Y и жмем Enter
 - "Remove test database and access to it?", отвечаем Y и жмем Enter
 - "Reload privelege tables now?", отвечаем Y и жмем Enter
+
+Переходим к файлу конфигурации phpmyadmin 
+
+` nano /etc/httpd/conf.d/phpMyAdmin.conf `
+
+Находим там строку ` <Directory /usr/share/phpMyAdmin/ `
+
+Внутри меняем строку ` Require local ` на  ` Require all granted `
+
+Сохраняем(` Ctrl+O `) и выходим(` Ctrl+X `)
+
+Перезапускаем Apache 
+
+` systemctl restart httpd `
+
+phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 
 <h2 align="center"> ----- Python 3.11.3 ----- </h2>
 
