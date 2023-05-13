@@ -20,7 +20,7 @@
 
 ` dnf update php*  `
 
-` dnf install php php-cli php-common `
+` dnf install php php-fpm php-cli php-mysql php-json php-gmp php-imap php-gd php-ldap php-odbc php-common php-opcache php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap php-zip php-curl php-imagick php-intl `
 <hr>
 
 ` systemctl enable --now httpd `
