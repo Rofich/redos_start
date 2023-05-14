@@ -128,7 +128,7 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
    ` cd Python-3.11.3 `
 3. Подготовить компиляцию
    
-   ` ./configure `
+   ` ./configure --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib `
 4. Забилдить
    
    ` make `
