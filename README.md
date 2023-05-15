@@ -129,12 +129,20 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 3. Подготовить компиляцию
    
    ` ./configure --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib `
+   Если выдаёт ошибку, то:
+   
+   ` ./configure --enable-shared `
+   
 4. Забилдить
    
    ` make `
 5. Установить
    
    ` make install `
+   
+   Если в 3 пунтке была ошибка, то: 
+   
+   ` ldconfig /usr/local/lib `
    
 6. ` python3.11 -V `
 
@@ -172,3 +180,7 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 7. переходим на вкладку "Connection" и в поле "Host name/address" пишем localhost, и в поле "Password" вводим пароль котрый мы меняли в пункте 'Настроим пароль'
 8. Нажимаем кнопку Save 
 9. Всё, у вас появился сервер в pgAdmin4
+
+<h2 style="text-align:center">Django</h2>
+
+`  `
