@@ -182,7 +182,52 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 8. Нажимаем кнопку Save 
 9. Всё, у вас появился сервер в pgAdmin4
 
-<h2 style="text-align:center">Django</h2>
+<h2 align="center">Django</h2>
 
 ` dnf install python3-mod_wsgi `
+
+Переходим в дерективу сайта и создаем виртуальное окружение 
+
+` python3 -m venv .venv `
+
+Активируем его 
+
+` source .venv/bin/activate `
+
+Устанавливаем все нужные модули
+
+` pip3 install --upgrade pip django mod_wsgi mysqlclient `
+
+Получаем путь к WSGI
+
+` mod_wsgi_express module-config `
+
+Копируем строку LoadModule...
+
+Создаем django-проект
+
+` django-admin startproject mysite . `
+
+Изменяем файл wsgi.py
+
+` cd mysite `
+` nano wsgi.py `
+
+Находим строку ` import os `, и добавляем ` import os,sys `
+
+На следующей строке пишем:
+
+` sys.path.append("/полный/до/папки/.venv") `
+
+Сохраняем и выходим
+
+Изменим файл конфигурации apache2
+
+` cd /etc/httpd/conf `
+
+` nano httpd.conf `
+
+Удаляем строки 
+
+` DocumentRoot... `
 
