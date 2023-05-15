@@ -129,6 +129,7 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 3. Подготовить компиляцию
    
    ` ./configure --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib" `
+   
    Если выдаёт ошибку, то:
    
    ` ./configure --enable-shared `
