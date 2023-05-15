@@ -182,7 +182,7 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 8. Нажимаем кнопку Save 
 9. Всё, у вас появился сервер в pgAdmin4
 
-<h2 align="center">Django</h2>
+<h2 align="center">-----Django-----</h2>
 
 ` dnf install python3-mod_wsgi `
 
