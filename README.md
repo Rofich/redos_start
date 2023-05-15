@@ -12,7 +12,7 @@
 
 ` su `
 
-` dnf install httpd php81-release `
+` dnf install httpd httpd-devel php81-release `
 
 ` dnf clean all  `
 
@@ -128,7 +128,7 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
    ` cd Python-3.11.3 `
 3. Подготовить компиляцию
    
-   ` ./configure --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib `
+   ` ./configure --enable-shared LDFLAGS="-Wl,-rpath /usr/local/lib" `
    Если выдаёт ошибку, то:
    
    ` ./configure --enable-shared `
@@ -183,4 +183,5 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 
 <h2 style="text-align:center">Django</h2>
 
-`  `
+` dnf install python3-mod_wsgi `
+
