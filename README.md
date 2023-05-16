@@ -209,7 +209,7 @@ phpmyadmin Доступен по адресу "http://localhost/phpmyadmin"
 
 На следующей строке пишем:
 
-` sys.path.append("/полный/до/папки/.venv") `
+` sys.path.append("/полный/до/папки/.venv/lib/ваша-версия-python/site-packages") `
 
 Сохраняем и выходим
 
